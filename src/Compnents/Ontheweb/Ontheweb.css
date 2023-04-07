@@ -1,0 +1,33 @@
+.socials{
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+}
+
+.sub-sec{
+    display: flex;
+    gap: 2rem;
+}
+
+  
+input{
+    width: 80%;
+    height: 2rem;
+    border: 1px grey solid;
+    border-radius: .5rem;
+}
+  
+  .input {
+    color: var(--white);
+  }
+  
+ 
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: .5rem;
+}
+  
+
+   
