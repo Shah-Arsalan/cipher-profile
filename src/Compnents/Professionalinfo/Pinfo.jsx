@@ -1,3 +1,6 @@
+import "./Pinfo.css"
+
+
 const Pinfo = () => {
     return (
 
@@ -11,12 +14,7 @@ const Pinfo = () => {
           <div className="sub-sec">
           <div className="input">
               <label htmlFor="highest-education">Highest education</label>
-              {/* <input
-                id="highest-education"
-                className="input-txt"
-                type="text"
-              /> */}
-              <select>
+              <select className="select">
                 <option value={"xyz"}>{"Higher Education"}</option>
               </select>
             </div>

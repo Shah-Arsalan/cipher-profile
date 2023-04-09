@@ -1,6 +1,8 @@
+import { useData } from "../../Contexts/datacontext"
 import "./InterestModal.css"
 
 const InterestModal = () => {
+  const {appear , setAppear } = useData();
     return(
         <div className="active-outer">
         <div className="socials interests">
@@ -33,8 +35,8 @@ const InterestModal = () => {
             </div>
           </div>
           <div className="buttons">
-<button >Cancel</button>
-<button className="primary-button">Save</button>
+<button className="btn-cancel"  onClick={()=>setAppear(prev => !prev)  }>Cancel</button>
+<button className="btn" onClick={()=>setAppear(prev => !prev)}>Save</button>
       </div>
         </div>
      

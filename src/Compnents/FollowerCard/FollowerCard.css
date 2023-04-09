@@ -1,0 +1,37 @@
+
+
+.card-skeleton{
+    height: 26rem;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ 
+}
+
+.image-container{
+    height: 50%;
+}
+
+.image{
+    object-fit: fill;
+    border-radius: 1rem;
+
+}
+
+.card-button{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.card-button:hover{
+    background-color: var(--hover-color);
+}
+
+.vertical-card-component{
+    width: min-content;
+}
+
+
+.follower-container{
+    display: flex;
+    gap: 3rem;
+}

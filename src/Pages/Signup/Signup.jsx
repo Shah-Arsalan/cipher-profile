@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const Signup = () => {
-
+const navigate = useNavigate();
   return (
     <>
       {" "}
@@ -164,14 +164,14 @@ const Signup = () => {
               </div>
 
               <div className="input btn-input">
-                <button type="submit" className="primary-button">
+                <button type="submit" className="btn">
                   Create Account
                 </button>
               </div>
 
               <div className="input login-link flex-justify-center">
               <p className="loginLink"
-            //    onClick={() => navigate("/login")}
+               onClick={() => navigate("/login")}
                >
                Already a user? Login
                </p>

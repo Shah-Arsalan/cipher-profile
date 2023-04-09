@@ -1,6 +1,8 @@
+import { useData } from "../../Contexts/datacontext";
 import "./Password.css"
 
 const PasswordModal = () => {
+  const {appearPasswordModal , setAppearPasswordModal} = useData();
   return (
     <div className="active-outer">
     <div className="p-modal">
@@ -17,8 +19,8 @@ const PasswordModal = () => {
         <input id="co-password" className="input-txt pm-input" type="text" />
       </div>
       <div className="buttons">
-<button >Cancel</button>
-<button className="primary-button">Save</button>
+<button className="btn-cancel"  onClick={() => setAppearPasswordModal(prev => !prev)}>Cancel</button>
+<button className="btn" onClick={() => setAppearPasswordModal(prev => !prev)}>Save</button>
       </div>
     </div>
     </div>

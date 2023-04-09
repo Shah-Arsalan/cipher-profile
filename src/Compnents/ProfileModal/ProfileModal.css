@@ -1,0 +1,33 @@
+.modal-image{
+    width: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.img-editor{
+    background-color: white;
+    height: 100%;
+}
+
+.profile-editor{
+    display: flex;
+    align-items: center;
+   gap: 2rem;
+   background-color: white;
+   padding: 1rem;
+
+
+
+}
+
+.b-none{
+    box-shadow: none;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+}
+

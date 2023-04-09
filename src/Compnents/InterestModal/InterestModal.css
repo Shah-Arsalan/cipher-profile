@@ -17,3 +17,11 @@
 
 }
 
+
+.btn-cancel{
+background-color: black;
+color: white;
+border: none;
+border-radius: .5rem;
+cursor: pointer;
+}

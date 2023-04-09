@@ -5,6 +5,8 @@ import { Signup } from './Pages/Signup/Signup';
 import { LoginPage } from './Pages/Login/Login';
 import { PasswordModal } from './Compnents/PasswordModal/Password';
 import { InterestModal } from './Compnents/InterestModal/InterestModal';
+import { ProfileModal } from './Compnents/ProfileModal/ProfileModal';
+import { Followers } from './Pages/Followers/Followers';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
 <Route path="/login" element={<LoginPage/>} />
 <Route path="/password" element={<PasswordModal/>} />
 <Route path="/interest" element={<InterestModal/>} />
+<Route path="/profile" element={<ProfileModal/>} />
+<Route path="/followers" element={<Followers/>} />
 </Routes>
     
     </div>

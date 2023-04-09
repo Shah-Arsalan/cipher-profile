@@ -62,7 +62,7 @@ const LoginPage = () => {
 
             <div className="input btn-input">
               <button
-                className="primary-button"
+                className="btn"
                 // onClick={() =>
                 //   loginCall(loginDetails.email, loginDetails.password)
                 // }
@@ -71,14 +71,14 @@ const LoginPage = () => {
               </button>
             </div>
 
-            <div className="input btn-input">
+            {/* <div className="input btn-input">
               <button
-                className="primary-button"
+                className="btn"
                 onClick={() => guestLoginHandler()}
               >
                 Log In as guest
               </button>
-            </div>
+            </div> */}
 
             <div
               onClick={() => navigate("/signup")}
