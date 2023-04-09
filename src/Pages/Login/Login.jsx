@@ -3,6 +3,7 @@ import { useState } from "react";
 // import { useAuth } from "../../Contexts/auth-context";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 // import { useData } from "../../Contexts/DataContext";
 
 const LoginPage = () => {
@@ -17,7 +18,20 @@ const LoginPage = () => {
       password: "adarshbalika",
     });
     // loginCall("adarshbalika@gmail.com", "adarshbalika");
-  };
+  };  
+
+  const handleLogin = ()=>{
+   
+    axios.post("http://localhost:8080/login",loginDetails)
+    .then((res)=>{
+      if(res.data.msg === 'Login Successfull')
+      {
+        localStorage.setItem("Email",res.data.email)
+        navigate("/home")
+      }
+      console.log(res.data)})
+    .catch((err)=>console.log(err))
+  }
 
 
 
@@ -63,9 +77,9 @@ const LoginPage = () => {
             <div className="input btn-input">
               <button
                 className="btn"
-                // onClick={() =>
-                //   loginCall(loginDetails.email, loginDetails.password)
-                // }
+                onClick={
+                  handleLogin
+                }
               >
                 Log In
               </button>

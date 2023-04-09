@@ -9,7 +9,7 @@ const FollowerCard = () => {
       <div className="follower-container">
         <div className="card-skeleton">
           <div className="image-container position-relative">
-            <img className="image" src={me} alt="product-icon" />
+            <img className="image" src={cipher} alt="product-icon" />
           </div>
 
           <div className="content">

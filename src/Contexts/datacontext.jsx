@@ -10,9 +10,9 @@ const DataProvider = ({ children }) => {
   const [appearPasswordModal , setAppearPasswordModal] = useState(false)
   const [appearProfileModal , setAppearProfileModal] = useState(false)
   const [image , setImage] = useState(cipher)
-
+const [interestData, setInterestData] = useState()
   return (
-    <DataContext.Provider value={{ appear , setAppear ,appearPasswordModal, setAppearPasswordModal , appearProfileModal , setAppearProfileModal , image , setImage}}>
+    <DataContext.Provider value={{ appear , setAppear ,appearPasswordModal, interestData, setInterestData, setAppearPasswordModal , appearProfileModal , setAppearProfileModal , image , setImage}}>
       {children}
     </DataContext.Provider>
   );

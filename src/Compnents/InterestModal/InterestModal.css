@@ -24,4 +24,23 @@ color: white;
 border: none;
 border-radius: .5rem;
 cursor: pointer;
+padding:.5rem
+}
+
+.interest-child-selected{
+    border: 1px solid grey;
+    padding: .5rem 2rem .5rem 2rem;
+    border-radius: .5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: orange;
+    cursor: pointer;
+}
+
+.color{
+    background-color: orange;
 }

@@ -9,16 +9,15 @@ import { ProfileModal } from './Compnents/ProfileModal/ProfileModal';
 import { Followers } from './Pages/Followers/Followers';
 
 function App() {
+  const Email = localStorage.getItem("Email")
+  console.log(Email, "email")
   return (
     <div className="App">
 <Routes>
-<Route path="/" element={<ProfilePage/>} />
+<Route path="/" element={ <LoginPage/>} />
+<Route path="/home" element={<ProfilePage/> } />
 <Route path="/signup" element={<Signup/>} />
 <Route path="/login" element={<LoginPage/>} />
-<Route path="/password" element={<PasswordModal/>} />
-<Route path="/interest" element={<InterestModal/>} />
-<Route path="/profile" element={<ProfileModal/>} />
-<Route path="/followers" element={<Followers/>} />
 </Routes>
     
     </div>

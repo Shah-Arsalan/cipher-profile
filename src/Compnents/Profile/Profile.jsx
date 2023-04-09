@@ -1,20 +1,32 @@
 import "./Profile.css";
 import cipher from "../../images/cipher.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useData } from "../../Contexts/datacontext";
 import { ProfileModal } from "../ProfileModal/ProfileModal";
+import axios from "axios";
 
-let userData ={
-  userName:"Arsalan",
-  email:"xyz@gmail.com",
-}
+
 
 const Profile = () => {
   const {appearProfileModal , setAppearProfileModal , image , setImage} = useData();
+  const [username,setUserName] = useState("")
+
+  const email = localStorage.getItem("Email")
+  const getData = ()=>{
+    axios.get(`http://localhost:8080/signup/user-details/?email=${email}`)
+    .then((res)=>{
+      setUserName(res.data[0].fname+" "+res.data[0].lname)       
+    })
+    .catch((err)=>console.log(err))
+  }
     const loadfile = (event) => {
         const bol = event.target.files[0];
 bol && setImage(URL.createObjectURL(event.target.files[0]))
     }
+
+    useEffect(()=>{
+      getData()
+    },[])
   return (
     
       <div class="profile-container">
@@ -26,8 +38,8 @@ bol && setImage(URL.createObjectURL(event.target.files[0]))
             </div>
             <div className="p-info">
        <p>Hello,</p>
-       <p>{userData.name}</p>
-       <p>{userData.email}</p>
+       <p>{username}</p>
+       <p>{email}</p>
             </div>
           </div>
         
