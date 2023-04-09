@@ -9,7 +9,7 @@ const Interests = () => {
   const email = localStorage.getItem("Email");
   const getInterest = () => {
     axios
-      .get(`http://localhost:8080/interest/?email=${email}`)
+      .get(`https://cipher-backend-production.up.railway.app/interest/?email=${email}`)
       .then((res) => setInterestData(res.data.interests))
       .catch((err) => console.log(err));
   };

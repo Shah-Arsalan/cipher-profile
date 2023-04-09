@@ -22,7 +22,7 @@ const LoginPage = () => {
 
   const handleLogin = ()=>{
    
-    axios.post("http://localhost:8080/login",loginDetails)
+    axios.post("https://cipher-backend-production.up.railway.app/login",loginDetails)
     .then((res)=>{
       if(res.data.msg === 'Login Successfull')
       {

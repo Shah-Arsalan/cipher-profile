@@ -14,7 +14,7 @@ const ProfileModal = () => {
 const email = localStorage.getItem("Email")
 const pic = "shorturl.at/nyBL8"
   const editProfile = () => {
-    axios.put("http://localhost:8080/signup/user-details/edit", {
+    axios.put("https://cipher-backend-production.up.railway.app/signup/user-details/edit", {
       fname,
       lname,
       mobile,
@@ -27,7 +27,7 @@ const pic = "shorturl.at/nyBL8"
 
   //get data
   const getData = ()=>{
-    axios.get(`http://localhost:8080/signup/user-details/?email=${email}`)
+    axios.get(`https://cipher-backend-production.up.railway.app/signup/user-details/?email=${email}`)
     .then((res)=>{
       setFName(res.data[0].fname) 
       setLName(res.data[0].lname)      

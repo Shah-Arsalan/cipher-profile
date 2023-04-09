@@ -13,7 +13,7 @@ const OntheWeb = () => {
 
   const email = localStorage.getItem("Email")
   const editData = ()=>{
-    axios.post(`http://localhost:8080/social/edit`,{email,linkedin,facebook,twitter,github,website,instagram})
+    axios.post(`https://cipher-backend-production.up.railway.app/social/edit`,{email,linkedin,facebook,twitter,github,website,instagram})
     .then((res)=>{
       console.log(res)
     })
@@ -22,7 +22,7 @@ const OntheWeb = () => {
 
   const getData = ()=>{
     // editData()
-    axios.get(`http://localhost:8080/social/?email=${email}`,{linkedin,facebook,twitter,github,website,instagram})
+    axios.get(`https://cipher-backend-production.up.railway.app/social/?email=${email}`,{linkedin,facebook,twitter,github,website,instagram})
     .then((res)=>{
       console.log(res)
       setFacebook(res.data.facebook)

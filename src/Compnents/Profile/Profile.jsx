@@ -13,7 +13,7 @@ const Profile = () => {
 
   const email = localStorage.getItem("Email")
   const getData = ()=>{
-    axios.get(`http://localhost:8080/signup/user-details/?email=${email}`)
+    axios.get(`https://cipher-backend-production.up.railway.app/signup/user-details/?email=${email}`)
     .then((res)=>{
       setUserName(res.data[0].fname+" "+res.data[0].lname)       
     })

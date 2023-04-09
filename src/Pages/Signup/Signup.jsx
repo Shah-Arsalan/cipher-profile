@@ -30,7 +30,7 @@ const Signup = () => {
                   password: password,
                 };
 
-              axios.post("http://localhost:8080/signup" , allData)
+              axios.post("https://cipher-backend-production.up.railway.app/signup" , allData)
               .then((res)=>console.log(res))
               .catch((err)=>console.log(err))
 
